@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Textile Exchange – Scope Certificate</title>
+
+    <style>
+      /* =========================
+      HEADER
+      ========================= */
+
+      .te-header {
+        background: #f6f5ef;
+        padding: 14px 0;
+        margin-bottom: 16px;
+      }
+
+      .te-header-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+
+      .te-logo img {
+        height: 55px;
+      }
+
+      .te-nav {
+        display: flex;
+        gap: 16px;
+        font-size: 12px;
+        font-weight: 500;
+        color: #1f1f1f;
+      }
+
+      .te-nav span {
+        cursor: default;
+      }
+
+      /* =========================
+      SUB HEADER
+      ========================= */
+
+      .te-subheader {
+        background: #f6f5ef;
+        margin-bottom: 20px;
+      }
+
+      .te-subheader-inner {
+        max-width: 1000px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+        font-size: 11px;
+        color: #4a4a4a;
+      }
+
+      .back-link {
+        font-weight: 500;
+      }
+
+      /* =========================
+         GLOBAL
+      ========================= */
+      body {
+        margin: 40px;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont;
+        background: #f6f5ef;
+        color: #1f1f1f;
+      }
+
+      .page {
+        max-width: 1000px;
+        margin: 0 auto;
+      }
+
+      /* =========================
+         CARD
+      ========================= */
+      .card {
+        background: #ffffff;
+        border-radius: 6px;
+        padding: 16px;
+        margin-bottom: 24px;
+      }
+
+      .card h2 {
+        margin: 0 0 12px 0;
+        font-size: 15px;
+        font-weight: 600;
+      }
+
+      /* =========================
+         TABLE
+      ========================= */
+      table {
+        width: 100%;
+        border-collapse: collapse;
+        font-size: 10px;
+      }
+
+      thead th {
+        background: #2f3540;
+        color: #ffffff;
+        padding: 10px;
+        text-align: left;
+        font-weight: 600;
+      }
+
+      tbody td {
+        padding: 10px;
+        border-bottom: 1px solid #c7d7f2;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- HEADER -->
+    <header class="te-header">
+      <div class="te-header-inner">
+        <div class="te-logo">
+          <img
+            src="https://textileexchange.org/app/uploads/2022/09/Primary-Logo-Black.svg"
+            alt="Textile Exchange"
+          />
+        </div>
+      </div>
+    </header>
+    <!-- SUB HEADER -->
+    <div class="te-subheader">
+      <div class="te-subheader-inner">
+        <span class="back-link">← Back to Results</span>
+        <span>Last Refreshed: {{LAST_REFRESHED}}</span>
+      </div>
+    </div>
+    <div class="page">
+      <!-- Site Listing Results-->
+      <div class="card">
+        <h2>Site Listing Results</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Certification Body</th>
+              <th>Certified Organization Name</th>
+              <th>TE ID</th>
+              <th>Retired TE ID</th>
+              <th>License Number</th>
+              <th>Native Name</th>
+              <th>Country/Area</th>
+              <th>SC Number</th>
+              <th>SC Version Number</th>
+              <th>Standard</th>
+              <th>SC Status</th>
+              <th>Last Update Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{Site_Listing_ROWS}}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- CONTACT DATA -->
+      <div class="card">
+        <h2>Contact Data</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Contact</th>
+              <th>Address</th>
+              <th>State/Province</th>
+              <th>Country/Area</th>
+              <th>Public Email</th>
+              <th>Website</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{CONTACT_ROWS}}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- SCOPE CERTIFICATE DATA -->
+      <div class="card">
+        <h2>Scope Certificate Data</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Number</th>
+              <th>Version Number</th>
+              <th>TE ID</th>
+              <th>Retired TE ID</th>
+              <th>Organization Name</th>
+              <th>Brand Name</th>
+              <th>Issue Date</th>
+              <th>Valid Until</th>
+              <th>Program</th>
+              <th>Standard</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{SC_ROWS}}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- FACILITY DATA -->
+      <div class="card">
+        <h2>Facility Data</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Type</th>
+              <th>Name</th>
+              <th>TE ID</th>
+              <th>Retired TE ID</th>
+              <th>Address</th>
+              <th>State/Province</th>
+              <th>Country/Area</th>
+              <th>Standard</th>
+              <th>Process Category Code</th>
+              <th>Process Category Description</th>
+              <th>CB Code</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{FACILITY_ROWS}}
+          </tbody>
+        </table>
+      </div>
+
+      <!-- SCOPE CERTIFICATE PRODUCTS -->
+      <div class="card">
+        <h2>
+          Scope Certificate Products – Products Eligible for Certification
+        </h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Facility Name</th>
+              <th>Product Category Code</th>
+              <th>Product Category Description</th>
+              <th>Product Detail Code</th>
+              <th>Product Detail Description</th>
+              <th>Raw Material Code</th>
+              <th>Raw Material Description</th>
+              <th>Raw Material %</th>
+            </tr>
+          </thead>
+          <tbody>
+            {{SCOPE_PRODUCT_ROWS}}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </body>
+</html>
