@@ -1,5 +1,5 @@
 # ============================================================
-# 📊 TEXTILE EXCHANGE — Manual SC Lookup with AUTO TOKEN
+# 📊 TEXTILE EXCHANGE
 # ============================================================
 
 import requests
