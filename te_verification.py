@@ -11,7 +11,7 @@ from tabulate import tabulate
 import os 
 from datetime import datetime, timezone
 # ------------------------------------------------------------
-# AUTO TOKEN (Playwright)
+# AUTO TOKEN 
 # ------------------------------------------------------------
 TARGET_URL = "https://textileexchange.org/find-certified-company/"
 BASE_HEADERS = {
